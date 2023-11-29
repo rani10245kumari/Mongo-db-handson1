@@ -1,0 +1,44 @@
+<h2>Q1Create a database , give it name like ""Human_Resource"". Create a collection inside this named ""employee""</h2>
+<p>Ans-
+<h4>use Human_Resources</h4>
+<h4>db.employee</h4>
+</p>
+
+<h2>Q2Query the collection ""employee"" and list all the documents</h2>
+<p>Ans-
+<h4>db.employee.find({})
+</h4>
+</p>
+<h2>Q3. Query the collection ""employee"" and list the employees who are having salary more than 30000</h2>
+<p>Ans-
+<h4>db.employee.find({"salary":{$gt:30000}})</h4>
+</p>
+
+<h2>Q4.Query the collection ""employee"" and list the employees who are having experience more than 2 years.</h2>
+<p>
+    Ans-
+<h4>db.employee.find({"exp":{$gt:"2yrs"}})</h4>
+</p>
+
+<h2>Query the collection ""employee"" and list the employees who are graduated after 2015 and having experience more
+    than 1
+    year</h2>
+<p>
+    Ans-
+<h4>db.employee.find({"exp":{$gt:"1yrs"}},{"graduated":{$gt:2015}})</h4>
+</p>
+
+<h2>Query the collection ""employee"" and update the salary of the employee whose salary is greater than 70000 to 65000.
+</h2>
+<p>
+    Ans-
+<h4>db.employee.find({ "salary": { $lte: 40000, $gt: 20000 } })</h4>
+</p>
+
+<h2>Delete all the documents from ""employee"" where last company is Y"</h2>
+<p>
+    Ans-
+<h4>
+    db.employee.deleteMany({"lastcompany":"Y"})
+</h4>
+</p>
